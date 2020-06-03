@@ -1,7 +1,7 @@
 package main
 
 import (
-	"base/src/Object"
+	"base/src/Map"
 	"fmt"
 )
 
@@ -10,10 +10,15 @@ import (
 //	return u
 //}
 
+//map chan slice
+func change(u Map.User) {
+	u["id"] = "503"
+}
+
 func main() {
-	u := Object.NewUser(
-		Object.WithUserName("aaa"),
-		Object.WithUserID(110),
-	)
+	u := Map.NewUser()
+	u["id"] = "100"
+	u["name"] = "MIAbon"
+	change(u)
 	fmt.Println(u)
 }
