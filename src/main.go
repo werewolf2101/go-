@@ -12,6 +12,7 @@ import (
 
 func main() {
 	u := Object.NewUser(
+		Object.WithUserName("aaa"),
 		Object.WithUserID(110),
 	)
 	fmt.Println(u)

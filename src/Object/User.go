@@ -6,16 +6,11 @@ type User struct {
 	Sex  int
 }
 
-//有选择性的对ID进行赋值
-func NewUser(f func(u *User)) *User {
+//有选择性的对ID进行赋值 //代码量增加但是调用方便
+func NewUser(fs ...func(u *User)) *User { //...可变参数
 	u := new(User)
-	f(u)
-	return u
-}
-
-//只返回func本身不返回结果
-func WithUserID(id int) func(u *User) {
-	return func(u *User) {
-		u.Id = id
+	for _, f := range fs {
+		f(u)
 	}
+	return u
 }
