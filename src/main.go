@@ -35,5 +35,8 @@ func main() {
 
 	//打印指针地址
 	fmt.Println(&u)
-	fmt.Printf("%p", &u)
+	fmt.Printf("%p\n", &u)
+
+	uu := Object.NewUsers()
+	fmt.Println(uu)
 }
