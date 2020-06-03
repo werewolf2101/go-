@@ -14,8 +14,13 @@ func From(str string) String {
 }
 
 func (this String) Each(f func(item string)) {
-	for i := 0; i < len(this); i++ {
-		f(fmt.Sprintf("%c", this[i]))
+	//英文
+	//for i := 0; i < len(this); i++ {
+	//	f(fmt.Sprintf("%c", this[i]))
+	//}
+	//中文
+	for _, c := range this {
+		f(fmt.Sprintf("%c", c))
 	}
 }
 

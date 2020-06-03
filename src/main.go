@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	s := String.From("abc")
+	s := String.From("我abc")
 	fmt.Println(s, s.Len())
 
 	//for i:=0; i < len(s); i++{
