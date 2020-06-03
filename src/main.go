@@ -26,6 +26,8 @@ func main() {
 	//u.With("name", "MIAbon")
 
 	u.With("id", 100).
-		With("name", "MIAbon")
+		With("name", "MIAbon").
+		With("sex", "male").
+		With("age", 18)
 	fmt.Println(u)
 }
